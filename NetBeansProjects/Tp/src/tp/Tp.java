@@ -3,8 +3,8 @@ import javax.swing.JFrame;
         
 public class Tp {
     public static void main(String[] args) {
-        Etudient Et = new Etudient();
-        Et.setVisible(true);
+        Calculator frame = new Calculator();
+        frame.setVisible(true);
         
     }
     
