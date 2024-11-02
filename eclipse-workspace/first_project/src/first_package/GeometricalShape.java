@@ -1,9 +1,9 @@
 package first_package;
 
 abstract public class GeometricalShape {
-    abstract double surface();
-    abstract double perimeter();
-    double posX, posY;
+    abstract public double surface();
+    abstract public double perimeter();
+    protected double posX, posY;
     public void translate(double x, double y){
         posX += x;
         posY += y;

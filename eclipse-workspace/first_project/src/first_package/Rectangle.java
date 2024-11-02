@@ -1,7 +1,7 @@
 package first_package;
 
 public class Rectangle extends GeometricalShape{
-    double length, width;
+    private double length, width;
     public Rectangle(double x, double y, double length, double width){
         posX = x;
         posY = y;
@@ -9,11 +9,15 @@ public class Rectangle extends GeometricalShape{
         this.width = width;
     }
 
-    double surface(){
+    @Override 
+    public double surface(){
         return length * width;
     }
 
-    double perimeter(){
+    @Override
+    public double perimeter(){
         return 2 * (length + width);
     }
 }
+
+

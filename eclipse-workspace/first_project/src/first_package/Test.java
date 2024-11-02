@@ -2,15 +2,9 @@ package first_package;
 
 public class Test {
 	public static void main(String []args) {
-		Book b1 = new Book("My book", "Me");
-		Book b2 = new Book("My Second book", "Me");
-		System.out.println(b1.getTitle());
-		System.out.println(b1.getId());
-		System.out.println(Book.getNumberOfBooks());
-		System.out.println(b2.getTitle());
-		System.out.println(b2.getId());
-		System.out.println(Book.getNumberOfBooks());
-
+		Date date = new Date(24, 12, 2018);
+		Director e = new Director("imad", "ismail", date, 1450.2, "HR", "google");
+		e.print();
 	}
 }
 
