@@ -293,15 +293,12 @@ public class Calculator extends javax.swing.JFrame {
         display(clickedButton, text1);  // Pass the clicked button and target text field
         
     }
-    
 
     private void operationButtonPressed(java.awt.event.ActionEvent evt){
         javax.swing.JButton clickedButton = (javax.swing.JButton) evt.getSource();
         operation = clickedButton.getText();
         calculate();
     }
-    
-    
     
     private void calculate(){
         text1.setText("");
