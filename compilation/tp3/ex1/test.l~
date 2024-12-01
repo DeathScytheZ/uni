@@ -1,0 +1,16 @@
+%{
+	#include <stdio.h>
+	#include <stdbool.h>
+	bool iscomment = false;
+%}
+
+
+%%
+\/\*[\s\S]*?\*\/	{printf("%s", "This is a comment (:");}
+
+%%
+
+
+int main(){
+	yylex();
+}

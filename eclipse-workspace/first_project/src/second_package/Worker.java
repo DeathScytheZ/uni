@@ -16,7 +16,11 @@ public class Worker extends Person{
         this.salary = salary;
     }
 
-    public boolean superior(Worker w){
-        return this.getSalary() > w.getSalary();
+    public void superior(Worker w){
+        if(this.getSalary() > w.getSalary()){
+            System.out.println("The first worker's salary is greater than the second one's");
+        }else{
+            System.out.println("The second worker's salary is greater than the first one's");
+        }
     }
 }

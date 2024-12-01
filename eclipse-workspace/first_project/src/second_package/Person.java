@@ -17,8 +17,12 @@ public class Person{
         return this.age;
     }
 
-    public boolean superior(Person p){
-        return this.getAge() > p.getAge();
+    public void  superior(Person p){
+        if(this.getAge() > p.getAge()){
+            System.out.println("The first person's age is greater than the second one's");
+        }else{
+            System.out.println("The second person's age is greater than the first one's");
+        }
     }
 }
 

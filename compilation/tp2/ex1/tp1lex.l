@@ -11,10 +11,10 @@
 
 %%
 int main(int argc, char **argv){
-yyin = fopen("lex.yy.c",  "r");
-yylex(); 
-printf("lines=%d\n words=%d\n chars=%d", lines, words, chars);
-fclose(yyin);
+	yyin = fopen("lex.yy.c",  "r");
+	yylex(); 
+	printf("lines=%d\n words=%d\n chars=%d", lines, words, chars);
+	fclose(yyin);
 }
 
 

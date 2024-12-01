@@ -16,8 +16,12 @@ public class Student extends Person{
         this.yearOfStudy = yearOfStudy;
     }
     
-    public boolean superior(Student s){
-        return this.getYearOfStudy() > s.getYearOfStudy();
+    public void superior(Student s){
+        if(this.getYearOfStudy() > s.getYearOfStudy()){
+            System.out.println("The first strudent's year of study is greater than the second one's");
+        }else{
+            System.out.println("The second strudent's year of study is greater than the first one's");
+        }
     }
 
 }
