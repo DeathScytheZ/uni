@@ -31,4 +31,8 @@ public class BookService {
     public Book searchBook(String bookName) throws SQLException {
         return dbHelper.searchBookByName(bookName);
     }
+    
+    public boolean borrowBook(int student_id, String isbn, int borrow_period) throws SQLException{
+        return dbHelper.borrowBook(student_id, isbn, borrow_period);
+    }
 }

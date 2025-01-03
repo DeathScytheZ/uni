@@ -10,6 +10,8 @@ import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.ResultSet;
+import java.time.LocalDate;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 
@@ -92,7 +94,6 @@ public class DatabaseHelper {
             stmt.setString(1, bookName); // Search by exact title
 
             ResultSet rs = stmt.executeQuery();
-
             if (rs.next()) {
                 book = new Book(
                     rs.getString("title"),
@@ -108,4 +109,26 @@ public class DatabaseHelper {
         }
         return book;   
     }   
+    
+    public boolean borrowBook(int student_id, String isbn, int borrow_period) throws SQLException{
+        LocalDate currentDate = LocalDate.now();
+        java.sql.Date borrowDate = java.sql.Date.valueOf(currentDate);
+        LocalDate dueDate = currentDate.plusDays(borrow_period);
+        java.sql.Date sqlDueDate = java.sql.Date.valueOf(dueDate);
+         String query = "INSERT INTO borrowed (student_id, isbn, borrow_date, return_date) VALUES (?, ?, ?, ?)";
+            try (PreparedStatement statement = connection.prepareStatement(query)) {
+                statement.setInt(1, student_id);
+                statement.setString(2, isbn);
+                statement.setDate(3, borrowDate);
+                statement.setDate(4, sqlDueDate);
+                int rowsAffected = statement.executeUpdate();
+                if (rowsAffected > 0) {
+                    JOptionPane.showMessageDialog(null, "Book borrowed successfully!");
+                    return true;
+                } else {
+                    JOptionPane.showMessageDialog(null, "Failed to borrow book.");
+                    return false;
+                }
+            }
+    }
 }

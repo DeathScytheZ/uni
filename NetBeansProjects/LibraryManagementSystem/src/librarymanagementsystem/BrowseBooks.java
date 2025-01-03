@@ -49,141 +49,106 @@ public class BrowseBooks extends javax.swing.JFrame {
         year = new javax.swing.JLabel();
         publisher = new javax.swing.JLabel();
         copies = new javax.swing.JLabel();
+        okButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         genreLabel.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         genreLabel.setForeground(new java.awt.Color(255, 255, 255));
         genreLabel.setText("Genre:");
+        jPanel1.add(genreLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 176, 171, -1));
 
         isbnLabel.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         isbnLabel.setForeground(new java.awt.Color(255, 255, 255));
         isbnLabel.setText("ISBN:");
+        jPanel1.add(isbnLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 120, 171, 38));
 
         yearLabel.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         yearLabel.setForeground(new java.awt.Color(255, 255, 255));
         yearLabel.setText("Year:");
+        jPanel1.add(yearLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 339, 171, 38));
 
         languageLabel.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         languageLabel.setForeground(new java.awt.Color(255, 255, 255));
         languageLabel.setText("Language:");
+        jPanel1.add(languageLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 227, 171, 38));
 
         authorLabel.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         authorLabel.setForeground(new java.awt.Color(255, 255, 255));
         authorLabel.setText("Author:");
+        jPanel1.add(authorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 76, 171, 38));
 
         titleLabel.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         titleLabel.setForeground(new java.awt.Color(255, 255, 255));
         titleLabel.setText("Title:");
+        jPanel1.add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 32, 171, 38));
 
         publisherLabel.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         publisherLabel.setForeground(new java.awt.Color(255, 255, 255));
         publisherLabel.setText("Publisher:");
+        jPanel1.add(publisherLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 283, 171, 38));
 
         copiesLabel.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         copiesLabel.setForeground(new java.awt.Color(255, 255, 255));
         copiesLabel.setText("Copies:");
+        jPanel1.add(copiesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 395, 171, 38));
 
         title.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         title.setForeground(new java.awt.Color(255, 255, 255));
         title.setText("some book");
+        jPanel1.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 32, 366, 38));
 
         author.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         author.setForeground(new java.awt.Color(255, 255, 255));
         author.setText("someone");
+        jPanel1.add(author, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 76, 366, 38));
 
         isbn.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         isbn.setForeground(new java.awt.Color(255, 255, 255));
         isbn.setText("03265080500");
+        jPanel1.add(isbn, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 120, 366, 38));
 
         genre.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         genre.setForeground(new java.awt.Color(255, 255, 255));
         genre.setText("something, something else");
+        jPanel1.add(genre, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 170, 366, 39));
 
         language.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         language.setForeground(new java.awt.Color(255, 255, 255));
         language.setText("English");
+        jPanel1.add(language, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 227, 366, 38));
 
         year.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         year.setForeground(new java.awt.Color(255, 255, 255));
         year.setText("1989");
+        jPanel1.add(year, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 339, 366, 38));
 
         publisher.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         publisher.setForeground(new java.awt.Color(255, 255, 255));
         publisher.setText("some publisher");
+        jPanel1.add(publisher, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 283, 366, 38));
 
         copies.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         copies.setForeground(new java.awt.Color(255, 255, 255));
         copies.setText("11");
+        jPanel1.add(copies, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 395, 366, 38));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(titleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(authorLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(isbnLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(genreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(languageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(publisherLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(yearLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(copiesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(language, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(publisher, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(author, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(isbn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(year, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(copies, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(genre, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(author, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(isbn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(genre, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(authorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(isbnLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(genreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(languageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(language, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(publisherLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(publisher, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(yearLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(year, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(copiesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(copies, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
+        okButton.setBackground(new java.awt.Color(153, 153, 153));
+        okButton.setForeground(new java.awt.Color(255, 255, 255));
+        okButton.setText("Ok");
+        okButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                okButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(okButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 465, 187, 52));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/librarymanagementsystem/360_F_917125159_XvccmUDmfINJs1n85nux2tEZlg3gu8Ty (1).jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 560));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -198,6 +163,12 @@ public class BrowseBooks extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
+        HomePage home = new HomePage();
+        home.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_okButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -220,9 +191,11 @@ public class BrowseBooks extends javax.swing.JFrame {
     private javax.swing.JLabel genreLabel;
     private javax.swing.JLabel isbn;
     private javax.swing.JLabel isbnLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel language;
     private javax.swing.JLabel languageLabel;
+    private javax.swing.JButton okButton;
     private javax.swing.JLabel publisher;
     private javax.swing.JLabel publisherLabel;
     private javax.swing.JLabel title;
