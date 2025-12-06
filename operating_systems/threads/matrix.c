@@ -21,17 +21,41 @@ int main(){
     int ids[N];
     srand(time(NULL));
     for(int i = 0; i < N; i++){
-	ids[i] = i;
-	for(int j = 0; j < M; j++){
-	    matrix1[i][j] = rand() % 100 + 1;
-	    matrix2[i][j] = rand() % 100 + 1;
-	}
+        ids[i] = i;
+        for(int j = 0; j < M; j++){
+            matrix1[i][j] = rand() % 100 + 1;
+            matrix2[i][j] = rand() % 100 + 1;
+        }
     }
+    for(int i = 0; i < N; i++){
+        for(int j = 0; j < M; j++){
+            printf("%d ", matrix1[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+
+    for(int i = 0; i < N; i++){
+        for(int j = 0; j < M; j++){
+            printf("%d ", matrix2[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n");
 
     for(int i = 0; i < N; i++){
         pthread_create(&threads[i], NULL, routine, (void*) &ids[i]);
     }
     for(int i = 0; i < N; i++){
-	pthread_join(threads[i], NULL);
+        pthread_join(threads[i], NULL);
+    }
+
+    for(int i = 0; i < N; i++){
+        for(int j = 0; j < M; j++){
+            printf("%d ", matrix3[i][j]);
+        }
+        printf("\n");
     }
 }

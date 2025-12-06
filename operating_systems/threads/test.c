@@ -1,45 +1,41 @@
 #include <stdio.h>
-#include <unistd.h>
-#include <pthread.h>
+#include <stdlib.h>
 
-int counter = 0;
-int counter2 = 0;
+#define N 10000
+#define M 10000
 
-pthread_mutex_t lock;
-pthread_mutex_t lock2;
-
-void* routine(void* arg){
-    for(int i = 0; i < 1000; i++){
-        pthread_mutex_lock(&lock);
-        counter++;
-        pthread_mutex_lock(&lock2);
-        pthread_mutex_unlock(&lock);
-        pthread_mutex_unlock(&lock2);
-    }
-    return NULL;
-}
-
-
-void* routine2(void* arg){
-    for(int i = 0; i < 1000; i++){
-        pthread_mutex_lock(&lock2);
-        counter2++;
-        pthread_mutex_lock(&lock);
-        pthread_mutex_unlock(&lock);
-        pthread_mutex_unlock(&lock2);
-    }
-    return NULL;
-}
+int matrix1[N][M], matrix2[N][M], matrix3[N][M]; 
 
 int main(){
-    pthread_t thread1, thread2;
-    pthread_mutex_init(&lock, NULL);
-    pthread_mutex_init(&lock2, NULL);
-    pthread_create(&thread1,NULL, routine,NULL);
-    pthread_create(&thread2,NULL, routine,NULL);
-    pthread_join(thread1, NULL);
-    pthread_join(thread2, NULL);
-    pthread_mutex_destroy(&lock);
-    printf("Counter: %d\n", counter);
-    return 0;
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            matrix1[i][j] = rand() % 100 + 1;
+            matrix2[i][j] = rand() % 100 + 1;
+            matrix3[i][j] = matrix1[i][j] + matrix2[i][j];
+        }
+    }
+
+    for(int i = 0; i < N; i++){
+        for(int j = 0; j < M; j++){
+            printf("%d ", matrix1[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+
+    for(int i = 0; i < N; i++){
+        for(int j = 0; j < M; j++){
+            printf("%d ", matrix2[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+    for(int i = 0; i < N; i++){
+        for(int j = 0; j < M; j++){
+            printf("%d ", matrix3[i][j]);
+        }
+        printf("\n");
+    }
 }
