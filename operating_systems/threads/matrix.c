@@ -5,23 +5,40 @@
 #define N 10
 #define M 10
 
+typedef struct {
+	int result[M];
+	int n;
+} ROW;
+
 int matrix1[N][M], matrix2[N][M], matrix3[N][M]; 
 
 void* routine(void* arg){
-    int n = *(int*) arg;
-    int* result = malloc( M * sizeof(int));
+    ROW row = *(ROW*) arg;
     for(int i = 0; i < M; i++){
-        result[i] = matrix1[n][i] + matrix2[n][i]; 
+        row.result[i] = matrix1[row.n][i] + matrix2[row.n][i]; 
     }
-    pthread_exit(result);
+    pthread_exit(NULL);
 } 
 
 int main(){
-    pthread_t threads[N]; 
+    srand(time(NULL));
     for(int i = 0; i < N; i++){
-        pthread_create(&threads[i], NULL, routine, (void*) &threads[i]);
+	for(int j = 0; j < M; j++){
+	    matrix1[i][j] = rand() % 100 + 1;
+	    matrix2[i][j] = rand() % 100 + 1;
+	}
+    }
+    pthread_t threads[N];
+    ROW rows[N];
+	
+    for(int i = 0; i < N; i++){
+	rows[i].n = i;
+        pthread_create(&threads[i], NULL, routine, (void*) &rows[i]);
     }
     for(int i = 0; i < N; i++){
         pthread_join(threads[i], NULL); 
-    }
+	for(int j = 0; j < M; j++){
+		matrix3[i][j] = rows[i].result[j];
+	}
+}
 }
