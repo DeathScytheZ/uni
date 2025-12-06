@@ -31,4 +31,7 @@ int main(){
     for(int i = 0; i < N; i++){
         pthread_create(&threads[i], NULL, routine, (void*) &ids[i]);
     }
+    for(int i = 0; i < N; i++){
+	pthread_join(threads[i], NULL);
+    }
 }
